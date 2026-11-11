@@ -1,0 +1,290 @@
+[
+  {
+    "slug": "networking-basics",
+    "modules": [
+      {
+        "title": "Understanding the connection",
+        "lessons": [
+          {
+            "title": "A network is a conversation",
+            "markdown": "## The idea behind a network\nA network lets devices exchange information using agreed rules. Your phone, a printer and a laptop can all share a local area network (LAN). The internet connects many networks together; it is not the same thing as your home Wi-Fi.\n\nImagine a small community library. A visitor asks for a book, a librarian finds it, and the book reaches the right person. A network needs the same three things: a destination, a route and a shared way of communicating.\n\n### Three useful pieces\n- **An end device** creates or receives information: a laptop, phone or server.\n- **A switch** connects wired devices within a local network.\n- **A router** moves information between networks, such as your home network and your internet provider.\n\nWi-Fi is one way to connect a device to a local network. Ethernet is another. A strong Wi-Fi signal only tells you the wireless connection is strong; it does not prove the internet connection works.\n\n### Try it yourself\nList three devices you use. For each one, write down whether it connects by Wi-Fi, Ethernet or mobile data. Identify which device in your home routes traffic to your provider.\n\n> Start troubleshooting by separating the local connection from the connection to the internet."
+          },
+          {
+            "title": "Addresses and the job of DNS",
+            "markdown": "## Finding the right destination\nAn IP address identifies a network interface on an IP network. You might see a local IPv4 address such as 192.168.1.25. Devices on the same network need distinct addresses to communicate reliably.\n\nA **subnet** describes a range of addresses treated as local. Traffic intended for another network usually goes to a **default gateway**, often your router. The gateway then forwards it toward its destination.\n\n### Names are easier to remember\nPeople prefer a name such as example.org to a numeric address. The Domain Name System (DNS) helps resolve names to addresses. It acts like a directory, not like the road that carries the traffic.\n\nA DNS problem can stop a website name from resolving even when other network connections still work. Changing DNS settings does not repair an unplugged cable or restore a failed internet connection.\n\n### Make a small map\nDraw your laptop, a router and a website server. Label the laptop with a local address, the router with a gateway address, and the server with a domain name. Add an arrow from the laptop to a DNS resolver to show the name lookup.\n\n> Remember: IP addresses help identify destinations; DNS helps you find an address from a name."
+          }
+        ]
+      },
+      {
+        "title": "A practical troubleshooting method",
+        "lessons": [
+          {
+            "title": "Follow the path, one check at a time",
+            "markdown": "## Change one thing at a time\nTroubleshooting is more useful when it follows a repeatable order. Random changes make it difficult to tell what fixed a problem, and can create new problems.\n\n### A five-step connection checklist\n1. **Describe the symptom.** Is only one website unavailable, or does every app fail? Does the issue affect one device or everyone?\n2. **Check the local link.** Look for an unplugged cable, airplane mode or the wrong Wi-Fi network.\n3. **Check the device configuration.** Confirm the device has an address and a default gateway.\n4. **Check the wider connection.** Try another device on the same network. This helps distinguish a device issue from a shared connection issue.\n5. **Consider name resolution.** If a service can be reached by a known address but its name fails, investigate DNS carefully.\n\nOn Windows, the command ipconfig shows useful local network information. Do not post screenshots of private network details to public forums without removing identifying information.\n\n### Keep a record\nWrite down the symptom, the single change you made, and the result. If you ask for help, this short log is more valuable than a list of guesses.\n\n> A failed ping is a clue, not proof that a server is offline. Some systems intentionally block ping requests."
+          },
+          {
+            "title": "Build a reliable small network",
+            "markdown": "## Reliability starts with simple habits\nA small network does not need to be complicated. It needs sensible placement, documented settings and regular maintenance.\n\nPut your wireless router in an open, central location. Thick walls, metal cabinets and nearby interference can weaken a signal. Moving a router a short distance can be more useful than buying a faster plan.\n\n### Keep access intentional\nUse a strong, unique router administration password and a strong Wi-Fi passphrase. Prefer modern wireless security such as WPA3 where all devices support it, or WPA2-AES where required. Avoid sharing the main network password with every visitor; a guest network can separate guest devices when configured correctly.\n\nKeep router firmware updated using the manufacturer’s instructions. Before changing settings, record the current configuration and understand how to restore it.\n\n### Your final practice task\nCreate a one-page network checklist with these sections:\n- Devices and connection methods\n- Router location and administration access\n- A simple connection troubleshooting sequence\n- The person to contact if the provider connection fails\n\nReview the checklist with someone who has not seen your network before. If they can follow it, you have turned technical knowledge into a practical skill.\n\n> Network speed, coverage and availability are different measures. Identify which one needs improvement before choosing a solution."
+          }
+        ]
+      }
+    ],
+    "assessments": [
+      {
+        "title": "Connections checkpoint",
+        "module_position": 0,
+        "questions": [
+          {
+            "prompt": "Which device moves traffic between different networks?",
+            "options": ["A router", "A monitor", "A keyboard"],
+            "correct_index": 0
+          },
+          {
+            "prompt": "What does DNS help a device do?",
+            "options": [
+              "Charge its battery",
+              "Resolve a domain name to an address",
+              "Increase its screen resolution"
+            ],
+            "correct_index": 1
+          },
+          {
+            "prompt": "A strong Wi-Fi signal proves which of these?",
+            "options": [
+              "Every website is online",
+              "The wireless link has a strong signal",
+              "The provider connection cannot fail"
+            ],
+            "correct_index": 1
+          }
+        ]
+      },
+      {
+        "title": "Networking final assessment",
+        "module_position": null,
+        "questions": [
+          {
+            "prompt": "What is the best first step when troubleshooting?",
+            "options": [
+              "Change every setting",
+              "Buy a new router",
+              "Describe the symptom and its scope"
+            ],
+            "correct_index": 2
+          },
+          {
+            "prompt": "Only one laptop is offline, while another works on the same network. What should you investigate first?",
+            "options": [
+              "The affected laptop’s local connection",
+              "Replace the provider for everyone",
+              "Assume every website has failed"
+            ],
+            "correct_index": 0
+          },
+          {
+            "prompt": "Which habit makes network troubleshooting easier?",
+            "options": [
+              "Changing several things at once",
+              "Recording one change and its result",
+              "Never checking the local link"
+            ],
+            "correct_index": 1
+          },
+          {
+            "prompt": "What does a default gateway usually provide?",
+            "options": [
+              "A route toward other networks",
+              "A list of keyboard shortcuts",
+              "A guarantee that DNS is correct"
+            ],
+            "correct_index": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cybersecurity-fundamentals",
+    "modules": [
+      {
+        "title": "Protect your everyday accounts",
+        "lessons": [
+          {
+            "title": "Threats, risks and everyday decisions",
+            "markdown": "## Security is a set of practical decisions\nA threat is something that could cause harm. A vulnerability is a weakness a threat could exploit. Risk considers the likelihood and impact of an unwanted event. These words help you decide where to focus your effort.\n\nFor example, a reused password is a vulnerability. Someone attempting to sign in with leaked passwords is a threat. Losing access to an important email account is a possible impact.\n\n### Start with what matters\nList the accounts that would cause the most trouble if you lost them. Email often belongs near the top because it can receive password reset links for many other accounts. Work accounts, banking accounts and cloud storage may also need priority.\n\nProtecting everything equally can become overwhelming. Begin with high-impact accounts, then improve the rest in manageable steps.\n\n### A layered approach\n- Use unique passphrases, stored in a reputable password manager if practical.\n- Enable multi-factor authentication where available.\n- Keep devices and applications updated.\n- Maintain backups and test that you can restore an important file.\n\nNo single control prevents every incident. Layers reduce the chance that one mistake causes a complete loss.\n\n> Your first task: choose one important account and write down the impact of losing access. Then identify two protections you can improve today."
+          },
+          {
+            "title": "Passphrases, MFA and recovery",
+            "markdown": "## Give every account its own secret\nA unique passphrase prevents one breached service from exposing all your other accounts. Length and uniqueness matter more than predictable substitutions such as replacing a letter with a number.\n\nA password manager can generate and store different credentials. Protect the manager itself with a strong master passphrase and multi-factor authentication (MFA).\n\n### Add another layer\nMFA asks for more than a password. A security key or passkey can provide phishing-resistant authentication where supported. Authenticator apps are another common choice. SMS codes may still improve on a password alone, but have limitations such as SIM swapping and interception.\n\nNever share a one-time code with someone who calls or messages you, even if they claim to be support. A legitimate service does not need you to read your sign-in code to an unexpected caller.\n\n### Plan for losing a device\nStore recovery codes in a secure place separate from your phone. Keep account recovery information current. Understand the recovery process before an emergency.\n\nPractice by locating the security settings of a personal account. Check its active sessions, MFA options and recovery methods. Sign out sessions you do not recognize, then investigate using the service’s official support process.\n\n> A secure account that you cannot recover can become a new problem. Plan both protection and recovery."
+          }
+        ]
+      },
+      {
+        "title": "Recognize and respond",
+        "lessons": [
+          {
+            "title": "Spot a suspicious message",
+            "markdown": "## Phishing tries to borrow your trust\nA phishing message encourages you to reveal information, open a harmful attachment or take an action you would normally question. It might pretend to come from a colleague, a delivery service or a familiar platform.\n\nLook for pressure, unusual requests and a mismatch between the claimed sender and the destination of a link. Good grammar does not prove a message is safe; attackers can produce polished messages.\n\n### Pause, verify, then act\n1. Stop when a request creates urgency or asks for a secret.\n2. Open the organization’s website through a bookmark or by typing its known address.\n3. Verify unusual requests through a separate, trusted channel.\n4. Report suspicious work messages through your organization’s approved process.\n\nDo not rely on the displayed text of a link. The destination can be different. On a computer, carefully inspect the link destination without opening it. On a phone, avoid interacting if you cannot confidently inspect it.\n\n### Practice scenario\nA message says your payroll access will expire in ten minutes and asks you to enter your password at an unfamiliar domain. The safest response is to contact payroll through a known internal channel and report the message.\n\n> Verification should use contact details you already trust, not a phone number supplied by the suspicious message."
+          },
+          {
+            "title": "A calm first response",
+            "markdown": "## Respond with a plan\nIf you suspect an account or device has been compromised, avoid improvising. Follow your organization’s incident response process where one exists.\n\n### A personal response checklist\n- Record what happened and when, without copying sensitive information into public places.\n- Stop interacting with the suspicious message or site.\n- Report the incident through a trusted support channel.\n- If credentials were entered, use a known, clean device to change the affected password and review active sessions.\n- If you reused that password elsewhere, replace it on those accounts too.\n- Review recovery settings, MFA and recent activity.\n\nFor a suspected device infection, seek qualified support. Disconnecting a device may help limit spread in some situations, but your workplace response team may have specific evidence-preservation instructions.\n\n### Backups make recovery possible\nKeep more than one copy of important files, with at least one protected from accidental changes or ransomware. Test a restore rather than assuming a backup works.\n\nCreate your own contact sheet: official support number, account recovery links reached through known websites, and the location of recovery codes. Keep it accessible when your usual device is unavailable.\n\n> Reporting quickly is useful. Blame and embarrassment can delay the actions that reduce harm."
+          }
+        ]
+      }
+    ],
+    "assessments": [
+      {
+        "title": "Safer accounts checkpoint",
+        "module_position": 0,
+        "questions": [
+          {
+            "prompt": "Why should each account have a unique password?",
+            "options": [
+              "It makes all accounts use one secret",
+              "A breach on one service then exposes fewer other accounts",
+              "It removes the need for updates"
+            ],
+            "correct_index": 1
+          },
+          {
+            "prompt": "What should you do with an unexpected request for your MFA code?",
+            "options": [
+              "Share it immediately",
+              "Post it publicly",
+              "Refuse and verify through an official channel"
+            ],
+            "correct_index": 2
+          },
+          {
+            "prompt": "Why store recovery codes separately from a phone?",
+            "options": [
+              "They may be needed if the phone is lost",
+              "They improve Wi-Fi speed",
+              "They replace every password"
+            ],
+            "correct_index": 0
+          }
+        ]
+      },
+      {
+        "title": "Digital safety final assessment",
+        "module_position": null,
+        "questions": [
+          {
+            "prompt": "A message urges you to enter your work password on an unfamiliar domain. What is the safest next step?",
+            "options": [
+              "Use the link before it expires",
+              "Verify through a known official channel",
+              "Reply with your password"
+            ],
+            "correct_index": 1
+          },
+          {
+            "prompt": "Which is a vulnerability?",
+            "options": [
+              "Reusing a password across services",
+              "A backup that has been tested",
+              "A security update that is installed"
+            ],
+            "correct_index": 0
+          },
+          {
+            "prompt": "What makes a backup useful?",
+            "options": [
+              "Assuming it exists",
+              "Keeping the only copy on the same disk",
+              "Testing that important files can be restored"
+            ],
+            "correct_index": 2
+          },
+          {
+            "prompt": "What is a useful first response after entering a password on a suspicious site?",
+            "options": [
+              "Ignore it",
+              "Use a trusted device and official channel to secure and report the account",
+              "Share the password with a caller"
+            ],
+            "correct_index": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "excel-for-beginners",
+    "modules": [
+      {
+        "title": "A tidy starting point",
+        "lessons": [
+          {
+            "title": "Cells, rows and useful structure",
+            "markdown": "## Think of a worksheet as a well-organized list\nA worksheet contains cells arranged in rows and columns. A cell address combines a column letter and row number, such as B3. A workbook can contain several worksheets.\n\nA useful data table gives each column one clear meaning and each row one record. For a small expense list, use columns such as Date, Description, Category and Amount. Keep headers in the first row and avoid inserting decorative blank rows inside the data.\n\n### Build a tiny practice sheet\nEnter these records in a new workbook:\n- 1 June: notebooks, supplies, 12\n- 2 June: transport, travel, 8\n- 3 June: pens, supplies, 5\n\nKeep amounts as numbers, then apply an appropriate number format. Formatting changes how a number appears; it does not turn a number into a different value.\n\n### Avoid common traps\nMerged cells can make sorting and filtering harder. Use them sparingly outside data tables. Do not mix totals into the middle of records. Give worksheets meaningful names so a colleague can understand the workbook.\n\nSave the file with a clear name and keep a backup before making large changes.\n\n> A tidy table is easier to calculate, filter and explain. Structure is part of the analysis, not just decoration."
+          },
+          {
+            "title": "Sort and filter with care",
+            "markdown": "## Find what you need without losing context\nSorting changes the order of records. Filtering shows records that match conditions while temporarily hiding the others. Neither operation should break the relationship between the cells in a row.\n\nSelect the full table, including all relevant columns, before sorting. In a properly structured Excel table, sorting one column normally moves its associated row values too. Always check the result.\n\n### Practice with your expense list\n1. Select the data range and its header row.\n2. Format it as a table, confirming that it has headers.\n3. Filter Category to show only supplies.\n4. Clear the filter to see every record again.\n5. Sort Amount from largest to smallest and verify the descriptions still match.\n\nA filtered-out record is still present. This distinction matters when you calculate totals or share a screenshot. Someone reviewing the sheet should know that a filter is active.\n\n### Make the view readable\nFreeze the header row in a longer list. Use consistent date and currency formatting. Keep decorative formatting restrained so it is easy to distinguish headers, inputs and results.\n\n> Before sharing a workbook, clear unexpected filters and check for hidden rows. A tidy view helps another person interpret the data accurately."
+          }
+        ]
+      },
+      {
+        "title": "Turn values into answers",
+        "lessons": [
+          {
+            "title": "Your first formulas",
+            "markdown": "## A formula starts with an equals sign\nIn Excel, =A1+B1 adds the values in two cells. Cell references make the result update when the source data changes. Typing a total manually loses that connection.\n\nThe SUM function adds a range. If your expense amounts are in D2 through D4, enter =SUM(D2:D4) below the table. For the practice values 12, 8 and 5, the total is 25.\n\n### Relative and absolute references\nA relative reference changes when a formula is copied. Copy =D2*2 down one row and it becomes =D3*2.\n\nAn absolute reference stays fixed. If a conversion factor is in F1, use =D2*$F$1 and copy it down. The D2 reference changes with the row, while $F$1 continues to point at the same factor.\n\n### Test rather than trust\nAfter writing a formula, change one input and predict the new result. If the result does not change as expected, inspect the references and confirm that the source values are numbers rather than text.\n\nFormula separators can vary by regional settings. The examples in this course use English function names and common reference notation.\n\n> A formula should express a relationship. Make that relationship clear enough that another person can check it."
+          },
+          {
+            "title": "Check and explain your results",
+            "markdown": "## A result is useful when it can be trusted\nA spreadsheet can produce a precise-looking answer from incomplete or incorrect data. Checking the source is as important as writing the formula.\n\n### A short quality checklist\n- Confirm each column contains the expected kind of value.\n- Check that the formula range includes every intended record and no extra totals.\n- Look for blanks, duplicated records and inconsistent category names.\n- Compare a small sample with a manual calculation.\n- Change one input to confirm the result updates sensibly.\n\nAVERAGE gives the arithmetic mean of numeric values. COUNT counts numeric cells. SUM adds numeric values. Choose the function that matches your question rather than the one you remember first.\n\n### Create a useful summary\nFor your three expenses, show the total, number of numeric amounts and average amount in a separate summary area. The total is 25, the count is 3, and the average is approximately 8.33. Displaying two decimals does not change the stored result.\n\nIf you add a chart, give it a clear title and label its units. Avoid a chart when a small, clearly labelled table communicates the answer more directly.\n\n> Finish by writing one sentence explaining what the sheet tells you and one limitation of the data. A useful spreadsheet supports a decision, not just a calculation."
+          }
+        ]
+      }
+    ],
+    "assessments": [
+      {
+        "title": "Spreadsheet skills final assessment",
+        "module_position": null,
+        "questions": [
+          {
+            "prompt": "What does each row in a tidy data table usually represent?",
+            "options": [
+              "One record",
+              "A different unrelated layout",
+              "Only a total"
+            ],
+            "correct_index": 0
+          },
+          {
+            "prompt": "Which formula adds D2 through D4?",
+            "options": ["=COUNT(D2:D4)", "=SUM(D2:D4)", "=D2-D4"],
+            "correct_index": 1
+          },
+          {
+            "prompt": "What does $F$1 do when a formula is copied?",
+            "options": [
+              "Moves to the next row",
+              "Deletes the reference",
+              "Keeps the reference fixed"
+            ],
+            "correct_index": 2
+          },
+          {
+            "prompt": "What is the total of 12, 8 and 5?",
+            "options": ["20", "25", "28"],
+            "correct_index": 1
+          },
+          {
+            "prompt": "Before trusting a summary, what should you check?",
+            "options": [
+              "Only the cell color",
+              "The source data and formula range",
+              "Whether the file name is short"
+            ],
+            "correct_index": 1
+          }
+        ]
+      }
+    ]
+  }
+]
